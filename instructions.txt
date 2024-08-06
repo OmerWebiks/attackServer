@@ -35,3 +35,7 @@ Node()
 Node(value)
 Node(value, next)
 
+toString() - "Node value is: ??. has Next OR no Next"
+
+test all constructors and methods in the Main programm
+
