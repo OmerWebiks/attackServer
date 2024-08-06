@@ -5,3 +5,13 @@ and returns the content as a string, use await and Task.Run to read the file.
 
 Test the method by calling it from the Main method and displaying the file contents
 
+
+EX3
+1. create two asynchronous methods,
+GetDataFromServiceAAsync,
+GetDataFromServiceBAsync,
+each simulating data retrieval from different services with a delay of 1 second and 2 seconds
+rspectively.
+2. inthe Main method, call both methods concurrently using Task.WhenAll.
+Display the results when both tasks are completed
+

@@ -11,12 +11,28 @@ namespace attackServer
     {
         static async Task Main(string[] args)
         {
+            // ex1
             //string result = await GetDataAsync();
             //  Console.WriteLine(result);
             //  Console.ReadLine();
-            string filePathToRead = "C:\\Users\\Omer Munk\\source\\repos\\attackServer\\instructions.txt";
-            string content = await ReadFileAsync(filePathToRead);
-            Console.WriteLine(content);
+
+            // ex 2
+            //string filePathToRead = "C:\\Users\\Omer Munk\\source\\repos\\attackServer\\instructions.txt";
+            //string content = await ReadFileAsync(filePathToRead);
+            //Console.WriteLine(content);
+
+
+            // ex3
+
+            Task<string> TaskA = GetDataFromServiceAAsync();
+            Task<string> TaskB = GetDataFromServiceBAsync();
+
+
+            await Task.WhenAll(TaskA, TaskB);
+            
+
+            Console.WriteLine($"Task A result: {TaskA.Result}");
+            Console.WriteLine($"Task B result: {TaskB.Result}");
         }
         public static async Task<string> GetDataAsync()
         {
@@ -30,6 +46,18 @@ namespace attackServer
                 );
             return result;
 
+        }
+
+        public static async Task<string> GetDataFromServiceAAsync() {
+            await Task.Delay(1000);
+            return "Data from Service A";
+        }
+
+ 
+        public static async Task<string> GetDataFromServiceBAsync()
+        {
+            await Task.Delay(2000);
+            return "Data from Service B";
         }
     }
 }
