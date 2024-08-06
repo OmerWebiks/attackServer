@@ -26,14 +26,22 @@ namespace attackServer
 
             // ex3
 
-            Task<string> TaskA = GetDataFromServiceAAsync();
-            Task<string> TaskB = GetDataFromServiceBAsync();
+            //Task<string> TaskA = GetDataFromServiceAAsync();
+            //Task<string> TaskB = GetDataFromServiceBAsync();
 
-            await Task.WhenAll(TaskA, TaskB);
+            //await Task.WhenAll(TaskA, TaskB);
             
 
-            Console.WriteLine($"Task A result: {TaskA.Result}");
-            Console.WriteLine($"Task B result: {TaskB.Result}");
+            //Console.WriteLine($"Task A result: {TaskA.Result}");
+            //Console.WriteLine($"Task B result: {TaskB.Result}");
+
+
+            Node node1 = new Node();
+            Node node2 = new Node(5);
+            Node node3 = new Node(20, node2);
+            Console.WriteLine(node1);
+            Console.WriteLine(node2); 
+            Console.WriteLine(node3);
         }
         public static async Task<string> GetDataAsync()
         {
