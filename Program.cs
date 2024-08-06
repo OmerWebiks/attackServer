@@ -11,6 +11,7 @@ namespace attackServer
     {
         static async Task Main(string[] args)
         {
+
             // ex1
             //string result = await GetDataAsync();
             //  Console.WriteLine(result);
@@ -26,7 +27,6 @@ namespace attackServer
 
             Task<string> TaskA = GetDataFromServiceAAsync();
             Task<string> TaskB = GetDataFromServiceBAsync();
-
 
             await Task.WhenAll(TaskA, TaskB);
             
