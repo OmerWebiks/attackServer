@@ -15,3 +15,23 @@ rspectively.
 2. inthe Main method, call both methods concurrently using Task.WhenAll.
 Display the results when both tasks are completed
 
+
+
+
+
+Node Class:
+2 private properties:
+Value - int
+Next - Node
+
+4 methods:
+GetValue
+GetNext
+SetValue
+SetNext
+
+3 Constructors:
+Node()
+Node(value)
+Node(value, next)
+
