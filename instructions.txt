@@ -1,7 +1,7 @@
 EX2
 
 Write an asynchronous method ReadFileAsync that reads the contents of a text file asynchronosuly
-and returns the the content as a string, use await and Task.Run to read the file.
+and returns the content as a string, use await and Task.Run to read the file.
 
 Test the method by calling it from the Main method and displaying the file contents
 
