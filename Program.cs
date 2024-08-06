@@ -36,10 +36,8 @@ namespace attackServer
             //Console.WriteLine($"Task B result: {TaskB.Result}");
 
 
-            Node node1 = new Node();
-            Node node2 = new Node(5);
-            Node node3 = new Node(20, node2);
-            Console.WriteLine(node1);
+            Node<double> node2 = new Node<double>(5.5);
+            Node<double> node3 = new Node<double>(20.5, node2);
             Console.WriteLine(node2); 
             Console.WriteLine(node3);
         }

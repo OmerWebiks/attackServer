@@ -6,44 +6,39 @@ using System.Threading.Tasks;
 
 namespace attackServer
 {
-    internal class Node
+    internal class Node<T>
     {
-        private int? _value;
-        private Node _next;
+        private T _value;
+        private Node<T> _next;
 
-        public Node()
-        {
-            this.setValue(null);
-            this.setNext(null);
-        }
 
-        public Node(int value)
+        public Node(T value)
         {
             this.setValue(value); ;
             this.setNext(null);
         }
 
-        public Node(int value, Node next)
+        public Node(T value, Node<T> next)
         {
             this.setValue(value); ;
             this.setNext(next);
         }
 
-        public void setValue(int? value) {
+        public void setValue(T value) {
             this._value = value;
         }
 
-        public void setNext(Node next)
+        public void setNext(Node<T> next)
         {
             this._next = next;
         }
 
-        public int? getValue()
+        public T getValue()
         {
             return this._value;
         }
 
-        public Node getNext() {
+        public Node<T> getNext() {
             return this._next;
         }
 
